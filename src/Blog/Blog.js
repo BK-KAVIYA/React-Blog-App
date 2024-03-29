@@ -9,7 +9,6 @@ const Blog = ({blogs,title,handleDelete}) => {
                     <div className="blog-preview" key={blog.id}>
                         <h3>{ blog.title }</h3>
                         <p>Written by { blog.author }</p>
-                        <button onClick={()=>handleDelete(blog.id)}>Delete blog</button>
                     </div>
                 ))}
         </div>
