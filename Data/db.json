@@ -1,0 +1,17 @@
+{
+    "blogs":[
+        {
+            "title" : "My first blog post",
+            "body" : "Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "author" : "John Doe",
+            "id" : "1"
+
+        },
+        {
+            "title" : "Opening party!",
+            "body" : "Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "author" : "yoshi",
+            "id" : "2"
+        }
+    ]
+}
