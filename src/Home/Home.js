@@ -1,35 +1,10 @@
 import Blog from '../Blog/Blog';
+import useFetch from '../CustomHook/useFetch';
 import './Home.css';
-import {useState,useEffect} from 'react';
+
 
 const Home = () => {
-
-    const [blogs,setBlog] = useState(null);
-    const [isPending,setIsPending] = useState(true);
-    const [error,setError] = useState(null);
-
-
-    useEffect(()=>{
-        fetch('http://localhost:8000/blogsS')
-        .then(res=>{
-            if(!res.ok){
-                throw Error('Could not fetch the data for that resource');
-            }else{
-                return res.json();
-            }
-            
-        })
-        .then((data)=>{
-            setBlog(data);
-            setIsPending(false);
-            setError(null);
-        })
-        .catch((err)=>{
-            setIsPending(false);
-            setError(err.message);
-        })
-    },[]);
-
+    const{data:blogs,isPending,error} = useFetch('http://localhost:8000/blogs');
 
     return ( 
         <div className="home">
